@@ -1,0 +1,17 @@
+FROM python:3.12
+
+WORKDIR /app
+
+COPY ./.env ./.env
+COPY ./src/predict_app.py ./src/predict_app.py
+COPY ./src/utils.py ./src/utils.py
+COPY ./models ./models
+COPY ./requirements.txt ./requirements.txt
+COPY ./scripts ./scripts
+
+RUN pip3 install -r requirements.txt
+
+EXPOSE 8000
+
+RUN chmod +x ./scripts/start.sh
+ENTRYPOINT ["sh", "./scripts/start.sh"]
