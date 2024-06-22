@@ -18,7 +18,7 @@ logging.basicConfig(
     format='%(asctime)s %(message)s')
 
 endpoints = [
-    ('http://31.129.100.203:8000//predict', 'Алексеев'),
+    ('http://31.129.100.203:8000/predict', 'Алексеев'),
 ]
 
 config = dotenv_values(".env")
