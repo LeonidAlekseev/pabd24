@@ -20,7 +20,7 @@
   ```
 
 3. **Структура типового проекта Data Science и README.md:**
-  README.md включает структуру
+  - README.md включает структуру
   ```markdown
   # Data Science Project
 
@@ -73,7 +73,7 @@
   ```
 
 4. **Фреймворк Flask:**
-  Flask — это микрофреймворк для создания веб-приложений на Python.
+  - Flask — это микрофреймворк для создания веб-приложений на Python.
   ```python
   from flask import Flask
 
@@ -121,7 +121,7 @@
   ```
 
 6. **Библиотека Boto3:**
-  Boto3 — это библиотека для взаимодействия с AWS сервисами.
+  - Boto3 — это библиотека для взаимодействия с AWS сервисами.
   ```python
   import boto3
 
@@ -130,7 +130,7 @@
   ```
 
 7. **Библиотека python-dotenv:**
-  Python-dotenv используется для загрузки переменных окружения из файла `.env`.
+  - Python-dotenv используется для загрузки переменных окружения из файла `.env`.
   ```python
   from dotenv import load_dotenv
   import os
@@ -140,7 +140,7 @@
   ```
 
 8. **Фреймворк DVC:**
-  DVC (Data Version Control) используется для управления версиями данных и моделей.
+  - DVC (Data Version Control) используется для управления версиями данных и моделей.
   ```bash
   dvc init
   dvc add data/raw/dataset.csv
@@ -149,7 +149,7 @@
   ```
 
 9. **Сервер Gunicorn:**
-  Gunicorn — это WSGI HTTP сервер для Python веб-приложений.
+  - Gunicorn — это WSGI HTTP сервер для Python веб-приложений.
   ```bash
   gunicorn -w 4 myapp:app
   ```
