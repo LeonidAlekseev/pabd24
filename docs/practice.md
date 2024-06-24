@@ -20,7 +20,7 @@
   ```
 
 3. **Структура типового проекта Data Science и README.md:**
-  - README.md включает структуру
+  - README.md включает структуру.
   ```markdown
   # Data Science Project
 
