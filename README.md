@@ -53,13 +53,13 @@ python src/preprocess_data.py -s 0.9 -i data/raw/file.csv
 ### 5. Обучение модели 
 
 ```sh
-python src/train_model.py -m models/linear_regression_v01.joblib
+python src/train_model.py -m models/ridge_regression_v01.joblib
 ```  
 Аргумент -m или --model указывает путь сохранения модели, по умолчанию переменная MODEL_SAVE_PATH в исполняемом файле
 Модель обучается предсказывать цену (price) по площади (total_meters)
 
 ```sh
-python src/test_model.py -m models/linear_regression_v01.joblib
+python src/test_model.py -m models/ridge_regression_v01.joblib
 ```  
 Аргумент -m или --model указывает путь сохранения модели, по умолчанию переменная MODEL_SAVE_PATH в исполняемом файле
 Модель обучается предсказывать цену (price) по площади (total_meters)

@@ -17,7 +17,7 @@ except ModuleNotFoundError: # gunicorn fix
     from .utils import predict_io_bounded, predict_cpu_bounded, predict_cpu_multithread
 
 
-MODEL_SAVE_PATH = 'models/linear_regression_v01.joblib'
+MODEL_SAVE_PATH = 'models/ridge_regression_v01.joblib'
 TESTS = {
     'io_bounded': predict_io_bounded,
     'cpu_bounded': predict_cpu_bounded,
