@@ -47,7 +47,7 @@ def test_100(endpoint, name):
     for row in tqdm.tqdm(records):
         t, price = do_request(row, endpoint)
         delays.append(t)
-        print(f'Price: {price}, delay: {t}')
+        # print(f'Price: {price}, delay: {t}')
         pred_prices.append(price)
     avg_delay = sum(delays) / len(delays)
     error = np.array(pred_prices) - prices.to_numpy()
