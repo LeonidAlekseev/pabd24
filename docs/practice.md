@@ -1,6 +1,6 @@
 # Вопросы по практике на экзамен 
 
-1. **Команды для подключения к серверу по SSH, клонирования git-репозитория, создания и активации venv и установки зависимостей:**
+## 1. **Команды для подключения к серверу по SSH, клонирования git-репозитория, создания и активации venv и установки зависимостей:**
   ```bash
   ssh user@host
   git clone https://github.com/username/repository.git
@@ -10,7 +10,7 @@
   pip install -r requirements.txt
   ```
 
-2. **Скрипт для инициализации git репозитория, добавления всех файлов, коммита и пуша:**
+## 2. **Скрипт для инициализации git репозитория, добавления всех файлов, коммита и пуша:**
   ```bash
   git init
   git add .
@@ -19,7 +19,7 @@
   git push -u origin master
   ```
 
-3. **Структура типового проекта Data Science и README.md:**
+## 3. **Структура типового проекта Data Science и README.md:**
   - README.md включает структуру.
   ```markdown
   # Data Science Project
@@ -72,7 +72,7 @@
   Этот проект лицензирован. Подробности см. в файле LICENSE.
   ```
 
-4. **Фреймворк Flask:**
+## 4. **Фреймворк Flask:**
   - Flask — это микрофреймворк для создания веб-приложений на Python.
   ```python
   from flask import Flask
@@ -87,7 +87,7 @@
      app.run()
   ```
 
-5. **Расширения Flask-CORS и Flask-HTTPAuth:**
+## 5. **Расширения Flask-CORS и Flask-HTTPAuth:**
   - Flask-CORS: Управление CORS (Cross-Origin Resource Sharing).
   ```python
   from flask import Flask
@@ -120,7 +120,7 @@
     app.run()
   ```
 
-6. **Библиотека Boto3:**
+## 6. **Библиотека Boto3:**
   - Boto3 — это библиотека для взаимодействия с AWS сервисами.
   ```python
   import boto3
@@ -129,7 +129,7 @@
   s3.upload_file('local_file.txt', 'bucket_name', 's3_file.txt')
   ```
 
-7. **Библиотека python-dotenv:**
+## 7. **Библиотека python-dotenv:**
   - Python-dotenv используется для загрузки переменных окружения из файла `.env`.
   ```python
   from dotenv import load_dotenv
@@ -139,7 +139,7 @@
   secret_key = os.getenv('SECRET_KEY')
   ```
 
-8. **Фреймворк DVC:**
+## 8. **Фреймворк DVC:**
   - DVC (Data Version Control) используется для управления версиями данных и моделей.
   ```bash
   dvc init
@@ -148,13 +148,13 @@
   dvc push
   ```
 
-9. **Сервер Gunicorn:**
+## 9. **Сервер Gunicorn:**
   - Gunicorn — это WSGI HTTP сервер для Python веб-приложений.
   ```bash
-  gunicorn -w 4 myapp:app
+  gunicorn --workers 2 --threads 2 --preload app:app
   ```
 
-10. **Скрипт предварительной обработки CSV файла:**
+## 10. **Скрипт предварительной обработки CSV файла:**
    ```python
    import pandas as pd
 
@@ -163,7 +163,7 @@
    df_filtered.to_csv(args.output_file, index=False)
    ```
 
-11. **Скрипт обучения модели линейной регрессии:**
+## 11. **Скрипт обучения модели линейной регрессии:**
    ```python
    import pandas as pd
    from sklearn.linear_model import LinearRegression
@@ -176,7 +176,7 @@
    model.fit(X, y)
    ```
 
-12. **Скрипт тестирования модели линейной регрессии:**
+## 12. **Скрипт тестирования модели линейной регрессии:**
    ```python
    import pandas as pd
    from sklearn.metrics import mean_squared_error
@@ -190,7 +190,7 @@
    mse = mean_squared_error(y, predictions)
    ```
 
-13. **Пайплайн DVC:**
+## 13. **Пайплайн DVC:**
    ```yaml
    stages:
     preprocess:
@@ -217,7 +217,7 @@
        - report.txt
    ```
 
-14. **Dockerfile для предиктивного сервиса:**
+## 14. **Dockerfile для предиктивного сервиса:**
    ```dockerfile
    # Используем официальный образ Python
    FROM python:3.9-slim
@@ -235,6 +235,6 @@
    EXPOSE 5000
 
    # Команда для запуска приложения
-   CMD ["gunicorn", "-w", "4", "app:app"]
+   CMD ["gunicorn", "--workers", "2", "--threads", "2", "--preload", "app:app"]
    ```
 
